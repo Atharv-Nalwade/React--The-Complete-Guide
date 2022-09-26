@@ -28,3 +28,36 @@ Entire content of <div id="root"></div> will just be replaced with the React APP
 ./ is look in the same folder as in where the current opened file is 
 
 App is component
+
+JSX is Js and Html
+
+In react we builod oour custom html components
+
+In  react we build component tree where appis head and componentsd are wrote below it in hierarchy
+
+A COMPONENT IN REACT IS JS FUNCTION 
+
+-------We do not import our componets in index.js file only app is rendered there we import it in app file and put it in return of app
+
+React components first letter must be captial if small it is interpreted as html comp.
+
+To use componet in app.js file we write the impoterd as html tag eg 
+    import ExpenseItem from "./ExpesneItems"
+    <ExpenseItem></ExpenseItem>
+    
+------ In recat return statement we cannot return two root ele i.e  all should be wrapped by sometghing div,div under div wrap all around
+
+In react's html return part we use className instead of class as in html
+
+To run basic js inside jsx code snippets is ude {---} curly braces and that will run it in html of return its like ejs
+
+To send a data to a componet we can do it while calling the component in base file like <componet.</component> by adding attributes to the components
+like <componernt tile="any_name"></component> 
+or to run js inside it title={somejs }  
+
+--- Now when we send multiple attr from one side we need to collect it or store it on other side i.e to the place where they are received
+    that parameters are not sent as different paraments but instead as one sigle object we can call it anythinh it recoomended to call as props and they are senta s       key value pairs like props will have name:"Atharv"
+    The key in the props object is what you have sent on the other side i.e while writing componets and givings attributes to it like if name is passed there here use 
+    props.name
+    
+-- Prop sare send data to components    
