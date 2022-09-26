@@ -1,0 +1,30 @@
+React allows you to create reuasble and reactive components consiting of HTML and CSS
+
+/*
+ npm uninstall -g create-react-app
+
+npm cache clean --force”
+
+npm cache verify
+
+npx create-react-app my-app
+
+cd my-app
+
+npm start
+*/
+
+when in vs code when we write npm install it downloads all dependencies writtem in package.json and store it in project folder
+Also index.js code would not work in normal editor as we cannot import css file in js file the npm start does some transformations and tells browser to include the css file
+
+index.js is first file that runs
+
+const root=ReactDOM.createRoot(document.getElementById('root')); tells react the place to render the react application
+root.render(<App />) 
+---> 
+You can modify everything in the index.html.
+Entire content of <div id="root"></div> will just be replaced with the React APP file
+
+./ is look in the same folder as in where the current opened file is 
+
+App is component
