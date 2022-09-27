@@ -22,3 +22,26 @@ Eg:   <button onClick={()=>{console.log("athu")}}>Change</button>
  It returns a pair of values: the current state and a function that updates it
  
  the useState(props.tile) is the default statee or the one send by props 
+ 
+ the useState is component based even if they are many same components then aslo it affects only its own 
+ 
+ Also later times when the component is reinitialized that timw the default val. is not considered only the current is considered the past value is tken care of 
+ 
+ <input type="number" min='0.01' step='0.01' />
+ 
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 
+                                                                   Listening to User iNput
+                                                                   
+ The onchange event occurs when the value of an element has been changed.
+
+For radiobuttons and checkboxes, the onchange event occurs when the checked state has been changed.
+
+Tip: This event is similar to the oninput event. The difference is that the oninput event occurs immediately after the value of an element has changed, while onchange occurs when the element loses focus, after the content has been changed. The other difference is that the onchange event also works on <select> elements. 
+
+    const titleChangeHandler=() =>{
+    console.log("title changed")
+   }
+ <input type="text" onChange={titleChangeHandler} />   to  call the ufnction on change 
+ 
+ 
