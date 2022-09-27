@@ -1,0 +1,24 @@
+In react we handle events with props which startt with "On" they require a value which is a function which is called when the event happens
+Eg:   <button onClick={()=>{console.log("athu")}}>Change</button>
+       OR
+       const clickhandler = () =>{  log("ok" }
+       <button onClick={clickHandler}>Change</button>
+       
+ 
+ Good practice is to end the func. name with handler for event func.
+ 
+ Normally when we trya change a value in return of a component using a j svariable that doesnt work as the file or component is rendered only once and thus the vaibale value will naver be shoin in the broweser
+ 
+ Hooks start with use keyword  they cannot be used inside nested function and can be used only inside functions
+ 
+ change in a var will lead to calling of rendering component again 
+ 
+ useState(default_variable_od_value)
+ It returns an array  
+ first ele is the value itself and second si the updating function 
+ 
+ const [title,setTitle] = useState(props.title) intially tilte is equl to props.title or current state value  
+ and setTitle is the function used to set the new value 
+ It returns a pair of values: the current state and a function that updates it
+ 
+ the useState(props.tile) is the default statee or the one send by props 
