@@ -44,4 +44,78 @@ Tip: This event is similar to the oninput event. The difference is that the onin
    }
  <input type="text" onChange={titleChangeHandler} />   to  call the ufnction on change 
  
+ in js doc.getelebyId("someid").addeventListner("click",(event) => {---});  event is the daefault object that we get which describes the event that occured 
+ Sometimes we may want to know more information about the event, such as what element was clicked. In this situation, we need to pass in an event parameter to our function.
+ Here the event parameter is a variable named e but it can be easily called anything else such as "event". This parameter is an object which contains various information about the event such as the target id.
+ Here e is the obj ehich has info about the the evnt 
+   there input has value which holds value of the input 
+   therefore e.target.value gives us the value 
+    
+                  
+   -------------------------------------------------------------------
+  const [enteredTitle,setEnteredTitle]=useState("")
+    const [enteredAmount,setEnteredAmount]=useState("$0.0")
+    const [enteredDate,setEnteredDate]=useState("") 
+    
+    Alternative to this could be one state
+      const [userInput,setUserInput] = useState({
+           eneteredTitle="",
+           enteredAmount="",
+           eneterdDate=""
+           });
+           
+           so setUserInput({
+           ...userInput
+           enteredTitle:event.target.value    here we call the original userInput and override it with inputted entered Titlr 
+           }); 
+           
+           or better to  above coul be 
+           
+           setUserInputz( (prevState) = >
+           {  ..prevStae,
+            enteredTitle:event.target.value
+            });
+            
+            the para to function ensures that you have the latest stae passed to the function thus no problem in wrong statee reffering 
+            
+            
+            When form is submitted the default event that happens is onSubmit  and by default it reloads the webpage 
+            to Sttop that we can call event.preventDeafult(); whic does not send the request to the server an dthus no reload 
+            and we can use object to store all data and when submit log it to see it 
+            
+              Similar for enteredDAte and enteredAmoutn 
+                    
+           https://www.youtube.com/watch?v=-3lL8oyev9w  fro multiple states   good  explanation        
+   
+            ----------------------------------------------------------------------------------------------------------------------------------------------------
+                                                           Child to Parent Communication 
+                                                           
+   When we define a handler to something that time we do not manually call the handler fucntion ourselves it is by default called when we are having a ptr to function and we are calling it in another componet that time we have to use paranthesis to maually call it 
+   but we hvae to call it using the variabel in ehich we are storing it 
+   
+----   Sending function in parent to child using prop and in child using the var ofr which function is defined in parent and calling it using () then to send date we          give some argument to the function in child and that is passed to parent as a argument to function which is stored or declared inside the  parent function
+
+
+                                                                          Parent
+         const SaveExpenseDataHandler=(enteredExpenseData)=>{
+      const expenseData={
+        ...enteredExpenseData
+      }
+      console.log(expenseData)
+     }
+
+
+    return (
+        <div className='new-expense'>
+       <ExpenseForm  onSaveExpenseData={SaveExpenseDataHandler}/>   /  
+       </div>
+    );
+             
+                                                                    CHILD
+        props.onSaveExpenseData(expenseDate);    
+        
+        ---------
+               
+               To send data between two siblings we cannot pass it directly what we can do is to lift the state up from one child component toclosest parent and then passing the sate to sibling i.e  child of parent via props 
+               i.e parnet has two childs to so share data betwen the childs 
  
