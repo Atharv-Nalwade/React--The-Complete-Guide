@@ -1,0 +1,17 @@
+   MAP JS method 
+   The map() method in JavaScript creates an array by calling a specific function on each element present in the parent array. It is a non-mutating method. Generally map() method is used to iterate over an array and calling function on every element of array.
+Syntax:
+
+array.map(function(currentValue, index, arr), thisValue)
+Parameters: This method accepts two parameters as mentioned above and described below:
+
+function(currentValue, index, arr): It is required parameter and it runs on each element of array. It contains three parameters which are listed below:
+currentValue: It is required parameter and it holds the value of current element.
+index: It is optional parameter and it holds the index of current element.
+arr: It is optional parameter and it holds the array.
+thisValue: It is optional parameter and used to hold the value of passed to the function.
+
+function inside the map method is executed for every ele in the array 
+
+----------
+
