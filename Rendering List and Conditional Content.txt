@@ -11,7 +11,47 @@ index: It is optional parameter and it holds the index of current element.
 arr: It is optional parameter and it holds the array.
 thisValue: It is optional parameter and used to hold the value of passed to the function.
 
-function inside the map method is executed for every ele in the array 
+function inside the map method is executed for every ele in the array and that result is added to new array
 
 ----------
 
+      {[<ExpenseFilter/>,<Card/>]}  JSX will treat the objects in tha array side by side
+      
+      SetExpense([newlyadded,...expenses])  is not a good way of handling additions we should send parameter to it whcih is sent by default
+      
+      SetExpense( (prevexpense) => {  return [newlyadded,...prevexpenses] } )  prevExpense is efault objevt we get on update state 
+      
+ ------
+                     Understanding Keys
+                     
+      When we add item an extra div is added at end and all divs are revisted and shifted down to adjust the newly added which is not a great way 
+      
+      
+  ------
+                                               Conditional rendering
+              
+            WE can use Ternary operation to do that 
+            
+            condtion === something ? (then) : (else) 
+            
+             let expensesContent=<p>No Expenses Found.</p>;  this is allowed 
+             
+             
+  let expensesContent=<p>No Expenses Found.</p>;
+
+  if(filteredExpenses.length>0){
+    expensesContent=filteredExpenses.map((expense) => (
+      <ExpenseItem
+        key={expense.id}
+        title={expense.title}
+        amount={expense.amount}
+        date={expense.date}
+      />
+    ))
+  }
+  
+  -------------
+                                           Dynamic Styling
+                                           
+             Style in recat return needs an object style={{"back-color":"red"}}    needs key value pairs 
+             
