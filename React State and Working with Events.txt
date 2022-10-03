@@ -118,4 +118,6 @@ Tip: This event is similar to the oninput event. The difference is that the onin
                
                To send data between two siblings we cannot pass it directly what we can do is to lift the state up from one child component toclosest parent and then passing the sate to sibling i.e  child of parent via props 
                i.e parnet has two childs to so share data betwen the childs 
+               
+               
  
