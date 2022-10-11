@@ -89,5 +89,5 @@ You define the desired outcome (e.g. a target UI) and let the library (React) fi
 --- Children is used to write data between custom component  custom componet like card
     and to aceess data between them written in parent comp. write props.children
     
---- even prop receives by default children and they can be used to acees cotent inside somme elses component
+--- every prop receives by default children and they can be used to acees cotent inside somme elses component
     
