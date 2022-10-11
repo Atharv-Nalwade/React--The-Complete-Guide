@@ -76,7 +76,7 @@ Tip: This event is similar to the oninput event. The difference is that the onin
             enteredTitle:event.target.value
             });
             
-            the para to function ensures that you have the latest stae passed to the function thus no problem in wrong statee reffering 
+            the para to function ensures that you have the latest stae passed to the function thus no problem in wrong statee reffering as we know that react schedules             updates so it might happen that we might refer to wrong state 
             
             
             When form is submitted the default event that happens is onSubmit  and by default it reloads the webpage 
@@ -85,7 +85,9 @@ Tip: This event is similar to the oninput event. The difference is that the onin
             
               Similar for enteredDAte and enteredAmoutn 
                     
-           https://www.youtube.com/watch?v=-3lL8oyev9w  fro multiple states   good  explanation        
+           https://www.youtube.com/watch?v=-3lL8oyev9w  fro multiple states   good  explanation    
+           
+           To way Data Binding is when we change we also update 
    
             ----------------------------------------------------------------------------------------------------------------------------------------------------
                                                            Child to Parent Communication 
