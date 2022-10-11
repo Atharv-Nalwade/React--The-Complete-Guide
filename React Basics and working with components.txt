@@ -72,3 +72,19 @@ Question 4:
 What does "declarative" mean?
 You define the desired outcome (e.g. a target UI) and let the library (React) figure out the steps.
 
+-- Any js inside a return statement of a component is written inside {----} like title={expenses[0].id} amount={expenses[0].amt}
+
+   and on other side we get all attr in a single object
+   
+   function anyname (props){
+   props.id ---> to acess the properties sent on other side 
+   props.amt
+   }
+   
+--- Sometimes we just need a wrapper to wrap things that have just have <div classname="any_name">TO be wrapped contents </div>
+    or a custom component ( eg. div) 
+    <card>-------</card>
+    to pass data between the card 
+    
+--- Children is used to write data between custom component  custom componet like card
+    
