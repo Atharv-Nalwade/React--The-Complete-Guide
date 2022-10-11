@@ -1,1 +1,19 @@
+in recat style is in { { ---} }
 
+Inline Styles:
+
+<label style={{ color: !isValid ? "red" : "black" }}>Course Goal</label>
+In recat while adding style css prop is camelcase property of css version eg background-color is bcakgroundColor
+
+Dynamic class:
+   The class is not dynamic bt the compnent to which it is added is dyamically selected
+   Eg. <div className={`form-control ${!isValid ? "invalid" : ""}`}>
+                                here syntax ${} allows us to add someting using js in a string 
+                                thus here the class for the comonent is dynamic
+    
+    ${} is a placeholder for the template literal 
+    
+    
+    Styled Components 
+     it i sused to wtrite component specific css
+     & for quesdo selector
