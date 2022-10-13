@@ -38,6 +38,7 @@ function inside the map method is executed for every ele in the array and that r
              
              
   let expensesContent=<p>No Expenses Found.</p>;
+  
 
   if(filteredExpenses.length>0){
     expensesContent=filteredExpenses.map((expense) => (
