@@ -1,5 +1,4 @@
 // Normal function
-
 function myName(name){
   console.log(name)
 }
