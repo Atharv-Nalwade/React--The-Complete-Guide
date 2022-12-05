@@ -10,3 +10,7 @@
  
  --- onClick={() => {console.log("Clicked")}}
  
+--- onChange is used to handle changes on input or somme other is is similar to onInput
+
+--- event is the action that we should change to OnChangeHandler function and that helps us in knowing what event happend and get the values out of it 
+--- event.target.value has the value of the event 
