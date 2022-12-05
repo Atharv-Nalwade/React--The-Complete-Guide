@@ -29,3 +29,9 @@
 --- We use value of input because when we reload the prev values remain in the input they do not change so to get latest one we use value={enteredTitle} so that the value id also changed depending on current value stored in useState
 
     
+![Screenshot (27)](https://user-images.githubusercontent.com/98139553/205702010-ee575a9c-3082-4282-acbb-3c76305d361e.png)
+![Screenshot (28)](https://user-images.githubusercontent.com/98139553/205702025-4aec2b95-f18e-46ca-90a0-b7faee81a5ed.png)
+--- For child to parent communication what we do is 
+    In Parent we create a custom handler for the child component add a function pointer over there ( as we do in onClick etc ) then in the actual dfunction defination     we declare a paramter that the function should have when the function is called and that parameter is data from child
+    In Child we requitre props and we do props.customHandler ( declared in parent ) and now we call the function pointed by it and pass in the data that we want to         pass and thus the data in child is sent to parent  we add () to handler name not the function name of parent  
+    
