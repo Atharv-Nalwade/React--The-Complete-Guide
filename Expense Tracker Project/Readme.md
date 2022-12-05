@@ -6,3 +6,7 @@
 ![Screenshot (17)](https://user-images.githubusercontent.com/98139553/205505881-d7e32666-c991-4344-a9d2-a18ccfe2acb0.png)
 ![Screenshot (19)](https://user-images.githubusercontent.com/98139553/205506144-99a28e4c-e84b-4327-8b9d-002b8328c4f2.png)
  use props.children to create Wrapper Components   Wrapper help reduce code duplication
+ 
+ 
+ --- onClick={() => {console.log("Clicked")}}
+ 
