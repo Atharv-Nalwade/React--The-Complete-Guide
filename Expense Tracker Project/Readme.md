@@ -44,3 +44,7 @@
 ![Screenshot (29)](https://user-images.githubusercontent.com/98139553/205708966-11d826d1-358e-41b7-b3d3-ab0c038e58e1.png)
 
 Here we are lifting state up nut two way data binding is not done to to that we can pass filtered year as value of a prop and on other side we can make value of dropdown as props.( use state 1st argument on other side )
+
+
+
+![Screenshot (136)](https://user-images.githubusercontent.com/98139553/205709513-c1e56506-6a87-4f4e-a1c9-73820d36eac7.png)
