@@ -14,3 +14,18 @@
 
 --- event is the action that we should change to OnChangeHandler function and that helps us in knowing what event happend and get the values out of it 
 --- event.target.value has the value of the event 
+
+![Screenshot (24)](https://user-images.githubusercontent.com/98139553/205678471-3c0a4264-471f-48cf-9449-897149a902a5.png)
+--- Insted of having 3 individual we can one clubbed state 
+
+---And while updating we use spread operator to extract all previously stored values and overeride the chnaged values and then store them 
+--- Also while updating state which depends on prev state do like thiis 
+    setUserInput( (prevState) => { return {...prevState,eneteredTitle:event.target.value } } );
+    prevState is passed by react internally we do not need to pass it
+    This is done to make sure we are poitnign towards correct prev state
+    
+
+![Screenshot (25)](https://user-images.githubusercontent.com/98139553/205679200-baf13dbe-5de0-4537-b9c1-e1b0db56b4a5.png)
+--- We use value of input because when we reload the prev values remain in the input they do not change so to get latest one we use value={enteredTitle} so that the value id also changed depending on current value stored in useState
+
+    
