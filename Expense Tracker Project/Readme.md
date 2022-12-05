@@ -39,3 +39,8 @@
     
  --- Lifting State up is to pass date from child to parent to either use it there or to pass it to some other comp.   
     
+
+![Screenshot (135)](https://user-images.githubusercontent.com/98139553/205708940-e57d7019-3489-47c3-a8a5-33f6e53d72f5.png)
+![Screenshot (29)](https://user-images.githubusercontent.com/98139553/205708966-11d826d1-358e-41b7-b3d3-ab0c038e58e1.png)
+
+Here we are lifting state up nut two way data binding is not done to to that we can pass filtered year as value of a prop and on other side we can make value of dropdown as props.( use state 1st argument on other side )
