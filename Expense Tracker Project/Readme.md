@@ -35,3 +35,7 @@
     In Parent we create a custom handler for the child component add a function pointer over there ( as we do in onClick etc ) then in the actual dfunction defination     we declare a paramter that the function should have when the function is called and that parameter is data from child
     In Child we requitre props and we do props.customHandler ( declared in parent ) and now we call the function pointed by it and pass in the data that we want to         pass and thus the data in child is sent to parent  we add () to handler name not the function name of parent  
     
+    
+    
+ --- Lifting State up is to pass date from child to parent to either use it there or to pass it to some other comp.   
+    
