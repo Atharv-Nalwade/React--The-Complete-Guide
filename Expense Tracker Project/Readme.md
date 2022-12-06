@@ -51,3 +51,5 @@ Here we are lifting state up nut two way data binding is not done to to that we 
 
 
 --- When ever we use two way binnding we are creating a controlled compoennt
+
+
