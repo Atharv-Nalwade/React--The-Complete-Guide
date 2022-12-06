@@ -53,3 +53,20 @@ Here we are lifting state up nut two way data binding is not done to to that we 
 --- When ever we use two way binnding we are creating a controlled compoennt
 
 
+---When we add an item to list using [expense,..prevState] then the probelm is in dev tools the item is added at last of list
+and then all items are visited and updated to maatch the array we have created and that is slow as all items need to be shifted
+That can lead to state issues 
+
+---This can be solved by assignig keys to the items by usign key: prop which is built inn in react 
+
+---This helps react to identify different entities uniquely and visting and updating every item is not required
+
+---Add keys when mapping list of items
+
+---Conditional Contet is rendering different output based on different conditions
+Basically if else but most of them are not allowed in {} so use ternary operators
+
+---Conditon ? trueReturn :falseReturn
+
+
+---For style we have double curly braces because the {} is for dynmaic seeting of style and nested {} is beacuse the react needs the style as an object 
