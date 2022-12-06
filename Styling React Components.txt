@@ -1,5 +1,7 @@
 in recat style is in { { ---} }
 
+trim is a method to remove white space
+
 Inline Styles:
 
 <label style={{ color: !isValid ? "red" : "black" }}>Course Goal</label>
