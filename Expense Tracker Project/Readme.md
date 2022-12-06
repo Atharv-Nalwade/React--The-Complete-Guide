@@ -48,3 +48,6 @@ Here we are lifting state up nut two way data binding is not done to to that we 
 
 
 ![Screenshot (136)](https://user-images.githubusercontent.com/98139553/205709513-c1e56506-6a87-4f4e-a1c9-73820d36eac7.png)
+
+
+--- When ever we use two way binnding we are creating a controlled compoennt
