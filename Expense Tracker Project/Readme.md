@@ -70,3 +70,9 @@ Basically if else but most of them are not allowed in {} so use ternary operator
 
 
 ---For style we have double curly braces because the {} is for dynmaic seeting of style and nested {} is beacuse the react needs the style as an object 
+
+When we create our own components and use it as a wrapper and when we apply classname on that it wont get that it doesnt understand wha is classname so to apply styling of css file we go the component and accept it as props and then on div or other ele. over there wo do className=`${props.className}`  className is a props send for other file or parent file
+
+The unary plus operator (+) will convert a string into a number. The operator will go before the operand.
+
+
