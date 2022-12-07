@@ -1,0 +1,30 @@
+To solve the JSX limitation that we can return only one ele. we add <div><div/> it to wrap the component but that made render many divs which,
+do not not add any value to the project
+To solve this problem we create a wrapper compoent and in that componnent accept props and return props.children this solves the issue as no extra ele. is rendered 
+--- i.e a Empty wrapper component 
+
+React has inbulit empty wrapper <React.Fragment></React.Fragment>  or <></>   second one might or mmight not work depending upon workflow but first one always works
+
+Modal should be on top of everything since it is an overlay nesting it might work due to styling but is not a good practice
+Overlay should be on top of everything
+
+To solve this we use portal i.e it changes where the component should be rendered in the actual dom 
+it is from react-dom libray so we :
+1)  create a div in index.html and give it a id="xyz"
+2) In place where we the compoennt is written or used there we do 
+    { ReactDom.createPortal(----ele jsx code-----, document.getElementById('xyz')) }
+3) It takes 2 arguments 1st is which compoent is to rendered and second is where
+
+
+Refs are used to get access to get other DOM elements ( actual dom ele as we do from devloper tools -> elememts tab )
+--Its takes a default value jus like useState and returns a value that we can connect to something and that value can be used to manipulate the actual dom of
+that connected thing
+-- To connect it to a ele we set a special attribute on that ele i.e ref similar to onClick etc and its value is variable that we declare using useRef eg.
+    nameInput =useRef();
+    <input ref={nameInput}>
+-- Above nameInput on logging is a object and nameInput.current.value holds the value that we have enteered 
+
+--- They are quite similar to states but they access real dom ele and can manipuulation is possible also we can use it when we want to just read a value and no updation is required
+    at such times states would be heavy .
+    
+    Main is refs manipulatie actual dom 
