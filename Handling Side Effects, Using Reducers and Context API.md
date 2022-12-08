@@ -211,3 +211,8 @@ When the nearest <MyContext.Provider> above the component updates, this Hook wil
 To se tdynamic context value we can set key: function pointer ( i.e name of function without pointer) and in som eother place we say ctxData.funcPointer  to exxecute the function in the definned place 
 
 It is good practice to add function key value pair in our default context provoder for IDE autocommpletion there we dummy a dummy func. which does nothing eg onLogout: () => {}
+
+
+React Context Limitations:
+1) Not optimized for high frequency changes
+2) Shouldnt be used to replace all communications or props
