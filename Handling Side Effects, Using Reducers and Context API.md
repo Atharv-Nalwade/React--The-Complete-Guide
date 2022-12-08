@@ -132,7 +132,8 @@ CleanUp Function :
  
 --- Imp in sending reuqtes to server 
 
-
+Context
+--- React Context is cretae connection to component which needs the data and avoid long props chain
 useReducer:
 1) Use it when we have many states and they are workign towrds same thing 
 2) Complex state logic
