@@ -131,3 +131,14 @@ CleanUp Function :
  -- What we do is when we type singlee letter a setTimeout runs and it will be prinitng checking for validity but if we type before the timeout-time then the cleanup function before next time useEffect runs it will clear the timer and agiain it will start from zero so the point where " Checking for validty" would not be easily reached as we are typing before that timeout time so we would have "checking for validity" only after we stop typing or type after 1000ms gap 
  
 --- Imp in sending reuqtes to server 
+
+
+useReducer:
+1) Use it when we have many states and they are workign towrds same thing 
+2) Complex state logic
+3) When we nned to update state based on other states 
+
+![useReducer 2](https://user-images.githubusercontent.com/98139553/206369492-6c48a949-c85a-4944-948d-f8090d2af871.png)
+![useReducer 1](https://user-images.githubusercontent.com/98139553/206369525-f49cbf4e-f29b-4ea4-944f-3d887fef66a3.png)
+
+
