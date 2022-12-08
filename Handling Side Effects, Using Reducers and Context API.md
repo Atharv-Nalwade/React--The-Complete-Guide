@@ -144,3 +144,63 @@ useReducer:
 Context
 --- React Context is cretae connection to component which needs the data and avoid long props chain
 
+-- to use it we should wrap the ele. that should or can access it or listen to it
+--- It does not create a component but it creates a object and that object is what we wrap
+--- Also what we do is whilew wrapping what we do is eg. obj is AuthContext then we wrap by <AuthContext.Provider><---/> by that all components wrapped inside and their descendants can also listen to it
+--- AuthContext.Provider is a component
+--- To get acces to listen to value we use .Consumer
+---The provider is used to create a context that can be consumed. The consumer is used to consume the nearest provided context. Note that you can provide the same context many times through your application, and you can even provide the same context nested.
+--- <AuthCOntext.Consumer>
+{ (contextData) => {
+                    return( code that should have access to the data) 
+                   }
+}
+--- .Consumer takes a child function whihc gtes context as an argument by react we do not have to pass it
+--- If we hvae only default value in CreateContext then we do not nned .Provider we only need Consumer works as we do not have to provide anything down we hhave tojust use it so if only default then no Provider
+--- Above statement is when we are using the default value by consumer
+---The Provider component accepts a value prop to be passed to consuming components that are descendants of this Provider. One Provider can be connected to many consumers. Providers can be nested to override values deeper within the tree.
+---All consumers that are descendants of a Provider will re-render whenever the Provider’s value prop changes. The propagation from Provider to its descendant consumers (including .contextType and useContext) is not subject to the shouldComponentUpdate method, so the consumer is updated even when an ancestor component skips an update.
+--- To set value dynamically eg. <value={{isLoggedIn:statevalue from useState 1st argument}}
+
+```
+// Context lets us pass a value deep into the component tree
+// without explicitly threading it through every component.
+// Create a context for the current theme (with "light" as the default).
+const ThemeContext = React.createContext('light');
+
+class App extends React.Component {
+  render() {
+    // Use a Provider to pass the current theme to the tree below.
+    // Any component can read it, no matter how deep it is.
+    // In this example, we're passing "dark" as the current value.
+    return (
+      <ThemeContext.Provider value="dark">
+        <Toolbar />
+      </ThemeContext.Provider>
+    );
+  }
+}
+
+// A component in the middle doesn't have to
+// pass the theme down explicitly anymore.
+function Toolbar() {
+  return (
+    <div>
+      <ThemedButton />
+    </div>
+  );
+}
+
+class ThemedButton extends React.Component {
+  // Assign a contextType to read the current theme context.
+  // React will find the closest theme Provider above and use its value.
+  // In this example, the current theme is "dark".
+  static contextType = ThemeContext;
+  render() {
+    return <Button theme={this.context} />;
+  }
+}
+```
+Exmaple from react docs
+
+
