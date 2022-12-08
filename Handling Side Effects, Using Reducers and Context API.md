@@ -66,3 +66,68 @@ myTimer is NOT added as a dependency because it's not a component-internal varia
 
 setTimeout is NOT added as a dependency because it's a built-in API (built-into the browser) - it's independent from React and your components, it doesn't change
 ```
+
+
+---Initially loads (is initially created).
+Unmount is when a component
+unloads (is destroyed).
+The phase you didn't mention,
+is the (in-between) update phase.
+When a mounted component updates.
+The updating functional component
+is technically destroyed & re-created,
+but the update phase is different than
+the mount & unmount phases.
+
+CleanUp Function :
+---https://daily-dev-tips.com/posts/react-useeffect-cleanup/
+```
+  useEffect( () => {
+    console.log("ji");
+    setFormIsValid(
+      enteredEmail.includes('@') && enteredPassword.trim().length > 6
+    );
+
+  },[enteredEmail,enteredPassword])
+  ```
+  --- Above function will run on evry keystroke which is not appropriate instead what we want to is wait for certain period of time and then check for the validity           this is called debouncing this can be done using setTimeout func. but it also logs all only after a delay
+  ```
+  useEffect(() => {
+    setTimeout(() => {
+      setFormIsValid(
+        enteredEmail.includes("@") && enteredPassword.trim().length > 6
+      );
+          console.log("Check for validity");
+    }, 1000);
+  }, [enteredEmail, enteredPassword]);
+  
+  O/P: 6 Checking for Validity
+  ``` 
+  Output is same as prev code but only with slight delay
+  To do that we clear the prev timer and the new timer will run instead of it , as long as user i styping we clear all other timers and only timer is running 
+  
+  The 1st argument of cleanUP function is the function that executes and if we retun a function from that function tha is cleanup function 
+  It does not run on very first run of useEffect i.e first render but it runs before the component is unmounted or mounted or change in comp. i.e before the UseEffect   runs
+  
+  The clearTimeout() method clears a timer set with the setTimeout() method.
+  
+  ```
+    useEffect(() => {
+    // console.log("hi");
+    const identifier = setTimeout(() => {
+      setFormIsValid(
+        enteredEmail.includes("@") && enteredPassword.trim().length > 6
+      );
+      console.log("Checking for Validity");
+    }, 1000);
+
+    return () => {
+      console.log("CLEANUP");
+      clearTimeout(identifier);
+    };
+  }, [enteredEmail, enteredPassword]);
+  ```
+  Here if we type very fast we see that many keystroke's number = NO. of times CLEANUP is printed but checking for validity is printed only once 
+ -- What we do is when we type singlee letter a setTimeout runs and it will be prinitng checking for validity but if we type before the timeout-time then the cleanup function before next time useEffect runs it will clear the timer and agiain it will start from zero so the point where " Checking for validty" would not be easily reached as we are typing before that timeout time so we would have "checking for validity" only after we stop typing or type after 1000ms gap 
+ 
+--- Imp in sending reuqtes to server 
