@@ -114,3 +114,7 @@ const Todos = ({ todos }) => {
 
 export default memo(Todos);
 ```
+
+On re-render teh child comp. also re-render even if it had no changes
+
+Also if it has data been passed ( to child ) if data doesn changes on change in parent it i sre-renderd  because when upadtion i sdone the function is destroyed and then created again and the data is passed for first time and so it re-renders
