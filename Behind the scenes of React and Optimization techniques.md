@@ -117,7 +117,7 @@ export default memo(Todos);
 
 On re-render teh child comp. also re-render even if it had no changes
 
-Also if it has data been passed ( to child ) if data doesn changes on change in parent it i sre-renderd  because when upadtion i sdone the function is destroyed and then created again and the data is passed for first time and so it re-renders
+Also if it has data been passed ( to child ) if data doesn changes on change in parent it is re-renderd  because when upadtion is done the function is destroyed and then created again and the data is passed for first time( something like creating it for first time )  and so it re-renders--- Also it might feel that the same data would be passed to react memo so it shouldnt render but whappens happens is internalyy react checks the prev props with current props and othe rthan primitive values all other things are not equla like [1,2] != [1,2] because they have different space in mem. 
 
 The React useCallback Hook returns a memoized callback function.
 
@@ -135,4 +135,6 @@ we can use the useCallback hook to prevent the function from being recreated unl
 
 Use the useCallback Hook to prevent the Todos component from re-rendering needlessly
 
+React schedules the state change it does not do it instantly because of some other things og=f higher priority needed to be done if required and thus it schedules it 
 
+If many state changes are scheduled it might happen state change happens wrongly thus use prevstate style of updating
