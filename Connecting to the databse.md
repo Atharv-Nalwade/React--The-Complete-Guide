@@ -108,4 +108,6 @@ function App() {
 }
 
 ```
+When we are using .then() styleo fhandlign async code then we use .catch() to handle error 
 
+when we are using async await then we put all code in try and in catch(error){} block handle errors
