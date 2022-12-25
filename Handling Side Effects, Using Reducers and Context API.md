@@ -142,7 +142,7 @@ useReducer:
 
 
 Context
---- React Context is cretae connection to component which needs the data and avoid long props chain
+--- React Context is cretae connection to component which needs the data and avoid long props chain  
 
 -- to use it we should wrap the ele. that should or can access it or listen to it
 --- It does not create a component but it creates a object and that object is what we wrap
