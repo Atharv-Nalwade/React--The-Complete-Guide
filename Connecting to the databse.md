@@ -1,3 +1,5 @@
+fetch is not just to get data but also can send data
+
 .fetch() is a inbulit method, The Fetch API provides an interface for fetching resources (including across the network). It will seem familiar to anyone who has used XMLHttpRequest, but the new API provides a more powerful and flexible feature set.
 
 --fetch returns a promise whch can either be completed or not be completed it has 2 methods on it one is .then() method to define what happens when promise is fullfilled and other is .catch() which handles if promise is not fulllfiled 
