@@ -6,10 +6,15 @@ Take a read: https://www.w3schools.com/react/react_useeffect.asp
 
 Local Storage
 ---The localStorage object allows you to save key/value pairs in the browser.
+
 ---The localStorage object stores data with no expiration date.
+
 ---The data is not deleted when the browser is closed, and are available for future sessions.
+
 ---The sessionStorage Object which stores data for one session.
+
 ---(The data is deleted when the browser window is closed)
+
 ---Save Data to Local Storage --->localStorage.setItem(key, value);
 
 
@@ -69,15 +74,15 @@ setTimeout is NOT added as a dependency because it's a built-in API (built-into 
 
 
 ---Initially loads (is initially created).
-Unmount is when a component
-unloads (is destroyed).
-The phase you didn't mention,
-is the (in-between) update phase.
-When a mounted component updates.
-The updating functional component
-is technically destroyed & re-created,
-but the update phase is different than
-the mount & unmount phases.
+Unmount is when a component<br/>  
+unloads (is destroyed).<br/>
+The phase you didn't mention,<br/>
+is the (in-between) update phase.<br/>
+When a mounted component updates.<br/>
+The updating functional component<br/>
+is technically destroyed & re-created,<br/>
+but the update phase is different than<br/>
+the mount & unmount phases.<br/>
 
 CleanUp Function :
 ---https://daily-dev-tips.com/posts/react-useeffect-cleanup/
@@ -104,10 +109,10 @@ CleanUp Function :
   O/P: 6 Checking for Validity
   ``` 
   Output is same as prev code but only with slight delay
-  To do that we clear the prev timer and the new timer will run instead of it , as long as user i styping we clear all other timers and only timer is running 
+  To do that we clear the prev timer and the new timer will run instead of it , as long as user i styping we clear all other timers and only timer is running <br/>
   
-  The 1st argument of cleanUP function is the function that executes and if we retun a function from that function tha is cleanup function 
-  It does not run on very first run of useEffect i.e first render but it runs before the component is unmounted or mounted or change in comp. i.e before the UseEffect   runs
+  The 1st argument of cleanUP function is the function that executes and if we retun a function from that function tha is cleanup function <br/>
+  It does not run on very first run of useEffect i.e first render but it runs before the component is unmounted or mounted or change in comp. i.e before the UseEffect   runs<br/>
   
   The clearTimeout() method clears a timer set with the setTimeout() method.
   
@@ -130,12 +135,12 @@ CleanUp Function :
   Here if we type very fast we see that many keystroke's number = NO. of times CLEANUP is printed but checking for validity is printed only once 
  -- What we do is when we type singlee letter a setTimeout runs and it will be prinitng checking for validity but if we type before the timeout-time then the cleanup function before next time useEffect runs it will clear the timer and agiain it will start from zero so the point where " Checking for validty" would not be easily reached as we are typing before that timeout time so we would have "checking for validity" only after we stop typing or type after 1000ms gap 
  
---- Imp in sending reuqtes to server 
+<br/>--- Imp in sending reuqtes to server 
 
 useReducer:
-1) Use it when we have many states and they are workign towrds same thing 
-2) Complex state logic
-3) When we nned to update state based on other states 
+1) Use it when we have many states and they are workign towrds same thing <br/>
+2) Complex state logic <br/>
+3) When we nned to update state based on other states <br/> 
 
 ![useReducer 2](https://user-images.githubusercontent.com/98139553/206369492-6c48a949-c85a-4944-948d-f8090d2af871.png)
 ![useReducer 1](https://user-images.githubusercontent.com/98139553/206369525-f49cbf4e-f29b-4ea4-944f-3d887fef66a3.png)
@@ -146,21 +151,21 @@ Context
 
 -- to use it we should wrap the ele. that should or can access it or listen to it
 
---- It does not create a component but it creates a object and that object is what we wrap
---- Also what we do is whilew wrapping what we do is eg. obj is AuthContext then we wrap by <AuthContext.Provider><---/> by that all components wrapped inside and their descendants can also listen to it
---- AuthContext.Provider is a component
---- To get acces to listen to value we use .Consumer
----The provider is used to create a context that can be consumed. The consumer is used to consume the nearest provided context. Note that you can provide the same context many times through your application, and you can even provide the same context nested.
+--- It does not create a component but it creates a object and that object is what we wrap<br/>
+--- Also what we do is whilew wrapping what we do is eg. obj is AuthContext then we wrap by <AuthContext.Provider><---/> by that all components wrapped inside and their descendants can also listen to it<br/>
+--- AuthContext.Provider is a component<br/>
+--- To get acces to listen to value we use .Consumer<br/>
+---The provider is used to create a context that can be consumed. The consumer is used to consume the nearest provided context. Note that you can provide the same context many times through your application, and you can even provide the same context nested.<br/>
 --- <AuthCOntext.Consumer>
 { (contextData) => {
                     return( code that should have access to the data) 
                    }
-}
---- .Consumer takes a child function whihc gtes context as an argument by react we do not have to pass it
---- If we hvae only default value in CreateContext then we do not nned .Provider we only need Consumer works as we do not have to provide anything down we hhave tojust use it so if only default then no Provider
---- Above statement is when we are using the default value by consumer
----The Provider component accepts a value prop to be passed to consuming components that are descendants of this Provider. One Provider can be connected to many consumers. Providers can be nested to override values deeper within the tree.
----All consumers that are descendants of a Provider will re-render whenever the Provider’s value prop changes. The propagation from Provider to its descendant consumers (including .contextType and useContext) is not subject to the shouldComponentUpdate method, so the consumer is updated even when an ancestor component skips an update.
+}<br/>
+--- .Consumer takes a child function whihc gtes context as an argument by react we do not have to pass it<br/>
+--- If we hvae only default value in CreateContext then we do not nned .Provider we only need Consumer works as we do not have to provide anything down we hhave tojust use it so if only default then no Provider<br/>
+--- Above statement is when we are using the default value by consumer<br/>
+---The Provider component accepts a value prop to be passed to consuming components that are descendants of this Provider. One Provider can be connected to many consumers. Providers can be nested to override values deeper within the tree.<br/>
+---All consumers that are descendants of a Provider will re-render whenever the Provider’s value prop changes. The propagation from Provider to its descendant consumers (including .contextType and useContext) is not subject to the shouldComponentUpdate method, so the consumer is updated even when an ancestor component skips an update.<br/>
 --- To set value dynamically eg. <value={{isLoggedIn:statevalue from useState 1st argument}}
 
 ```
@@ -204,16 +209,16 @@ class ThemedButton extends React.Component {
 ```
 Exmaple from react docs
 
-const value = useContext(MyContext);
-Accepts a context object (the value returned from React.createContext) and returns the current context value for that context. The current context value is determined by the value prop of the nearest <MyContext.Provider> above the calling component in the tree.
+const value = useContext(MyContext);<br/>
+Accepts a context object (the value returned from React.createContext) and returns the current context value for that context. The current context value is determined by the value prop of the nearest <MyContext.Provider> above the calling component in the tree.<br/>
 
-When the nearest <MyContext.Provider> above the component updates, this Hook will trigger a rerender with the latest context value passed to that MyContext provider. Even if an ancestor uses React.memo or shouldComponentUpdate, a rerender will still happen starting at the component itself using useContext.
+When the nearest <MyContext.Provider> above the component updates, this Hook will trigger a rerender with the latest context value passed to that MyContext provider. Even if an ancestor uses React.memo or shouldComponentUpdate, a rerender will still happen starting at the component itself using useContext.<br/>
 
-To se tdynamic context value we can set key: function pointer ( i.e name of function without pointer) and in som eother place we say ctxData.funcPointer  to exxecute the function in the definned place 
+To se tdynamic context value we can set key: function pointer ( i.e name of function without pointer) and in som eother place we say ctxData.funcPointer  to exxecute the function in the definned place <br/>
 
-It is good practice to add function key value pair in our default context provoder for IDE autocommpletion there we dummy a dummy func. which does nothing eg onLogout: () => {}
+It is good practice to add function key value pair in our default context provoder for IDE autocommpletion there we dummy a dummy func. which does nothing eg onLogout: () => {}<br/>
 
 
 React Context Limitations:
-1) Not optimized for high frequency changes
+1) Not optimized for high frequency changes<br/>
 2) Shouldnt be used to replace all communications or props
